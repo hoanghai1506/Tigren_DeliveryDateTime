@@ -1,0 +1,11 @@
+<!-- HTML markup for the custom delivery date/time field -->
+<div class="field">
+    <label class="label" for="delivery-date">Delivery Date</label>
+    <div class="control">
+        <input type="date" class="input-text" data-bind="value: deliveryDate" />
+    </div>
+</div>
+<div class="field">
+    <label class="label" for="delivery-time">Delivery Time</label>
+    <select data-bind="options: deliveryTimeOptions, Value: 'Timevalue'"></select>
+</div>

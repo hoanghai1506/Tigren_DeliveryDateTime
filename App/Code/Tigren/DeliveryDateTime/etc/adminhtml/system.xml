@@ -1,0 +1,38 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+
+    <system>
+        <tab id="Tigren" translate="label" sortOrder="10">
+            <label>Tigren</label>
+        </tab>
+        <section id="hello" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Date Time Delivery</label>
+            <tab>Tigren</tab>
+            <resource>Tigren_DeliveryDateTime::config_shipping_hours</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0"
+                   showInStore="0">
+                <label>Shipping Day Off</label>
+                <field id="week_days" translate="label" type="multiselect" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Day Off</label>
+                    <source_model>Magento\Config\Model\Config\Source\Locale\Weekdays</source_model>
+                </field>
+                <field id="exclude_days" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Day OFF</label>
+                    <frontend_model>Tigren\DeliveryDateTime\Block\System\Config\Form\Field\ExcludeDaysMultipleFields</frontend_model>
+                    <backend_model>Tigren\DeliveryDateTime\Model\Config\Backend\ExcludeDaysMultipleFields</backend_model>
+                </field>
+            </group>
+            <group id="delivery_time_group" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>Shipping Day</label>
+                <field id="TimeSelect" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Shipping Time</label>
+
+                    <frontend_model>Tigren\DeliveryDateTime\Block\System\Config\Form\Field\TimeSelect</frontend_model>
+                    <backend_model>Tigren\DeliveryDateTime\Model\Config\Backend\SaveTimeDelivery</backend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

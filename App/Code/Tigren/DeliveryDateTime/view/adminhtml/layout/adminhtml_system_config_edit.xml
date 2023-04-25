@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="form">
+            <block class="Tigren\DeliveryTime\Block\Adminhtml\Config\Form" name="delivery_time_field" template="MyCompany_DeliveryTime::config/form/field.phtml">
+                <arguments>
+                    <argument name="data" xsi:type="array">
+                        <item name="config" xsi:type="array">
+                            <item name="label" xsi:type="string" translate="true">Delivery Time</item>
+                            <item name="comment" xsi:type="string" translate="true">Enter the desired delivery time</item>
+                            <item name="tooltip" xsi:type="array">
+                                <item name="description" xsi:type="string" translate="true">Enter the desired delivery time.</item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

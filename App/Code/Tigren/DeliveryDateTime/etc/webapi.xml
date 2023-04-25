@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--/**
+ * @author    Tigren Solutions <info@tigren.com>
+ * @copyright Copyright (c) 2023 Tigren Solutions <https://www.tigren.com>. All rights reserved.
+ * @license   Open Software License ("OSL") v. 3.0
+ */-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../app/code/Magento/Webapi/etc/webapi.xsd">
+    <route method="POST" url="/V1/rest_dev/getHourShipping/">
+        <service class="Tigren\DeliveryDateTime\Api\TimeShipCoditions" method="getShippingHours" />
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route method="POST" url="/V1/rest_dev/getDayOffShipping/">
+        <service class="Tigren\DeliveryDateTime\Api\TimeShipDayOff" method="getShippingDayOff" />
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+</routes>
